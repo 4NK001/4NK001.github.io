@@ -24,7 +24,7 @@ This portfolio was built from scratch using **HTML, CSS, and Vanilla JavaScript*
 - CSS3
 - Vanilla JavaScript
 
-## 🌐 Live Demo
+##  Live Demo
 
 https://4nk001.github.io
 
