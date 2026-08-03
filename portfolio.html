@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/svg+xml" href="./res/img/fav-icon.svg">
+    <link rel="stylesheet" href="./res/css/style.css">
+    <script>
+        if (localStorage.getItem('theme') === 'dark') {
+            document.documentElement.classList.add('dark');
+        }
+    </script>
+    <title>Anto Soji</title>
+</head>
+<body class="body">
+
+    <nav id="nav">
+        <h2 class="logo" onclick="window.location.href='#hero'">4NK</h2>
+        <div class="nav-right">
+            <ul class="nav-bar" id="navBar">
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <button id="commandBtn">
+    <span class="search-icon">⌕</span>
+    <span class="search-text">Search...</span>
+    <span class="shortcut">Ctrl K</span>
+</button>
+            <button id="themeToggle" aria-label="Toggle theme">
+                <svg class="icon-sun" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="5"/>
+                    <line x1="12" y1="1" x2="12" y2="3"/>
+                    <line x1="12" y1="21" x2="12" y2="23"/>
+                    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
+                    <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+                    <line x1="1" y1="12" x2="3" y2="12"/>
+                    <line x1="21" y1="12" x2="23" y2="12"/>
+                    <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
+                    <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+                </svg>
+                <svg class="icon-moon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+                </svg>
+            </button>
+            
+            <button id="hamburger" class="hamburger" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Command Palette -->
+    <div id="palette">
+        <div class="palette-box">
+            <input id="searchInput" type="text" placeholder="Type a command..." />
+            <div id="results">
+                <div class="group">
+                    <span class="group-title">Navigation</span>
+                    <div class="command" data-scroll="projects"><span>Projects</span></div>
+                    <div class="command" data-scroll="experience"><span>Experience</span></div>
+                    <div class="command" data-scroll="education"><span>Education</span></div>
+                    <div class="command" data-scroll="contact"><span>Contact</span></div>
+                </div>
+                <div class="group">
+                    <span class="group-title">Actions</span>
+                    <div class="command" data-link="resume.pdf"><span>Open Resume</span></div>
+                    <div class="command" data-link="https://github.com/4NK001"><span>GitHub</span></div>
+                    <div class="command" data-link="https://linkedin.com/in/anto-soji"><span>LinkedIn</span></div>
+                    <div class="command" data-link="mailto:antosoji.a@gmail.com"><span>Email Me</span></div>
+                    <div class="command" id="themeCommand"><span>Toggle Theme</span></div>
+                    <div class="command" data-scroll="top"><span>Go to Top</span></div>
+                </div>
+            </div>
+            <div id="noResults">
+                <h3>No command found.</h3>
+                <p>Try searching for:</p>
+                <div class="suggestions">
+                    <span>projects</span>
+                    <span>resume</span>
+                    <span>github</span>
+                    <span>contact</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast Container -->
+    <div id="toast-container"></div>
+
+    <!-- Hero -->
+    <section class="hero" id="hero">
+        <div class="hero-content">
+            <p class="intro">Hi, I'm</p>
+            <h1>Anto <span>Soji</span></h1>
+            <h2>Full Stack Developer</h2>
+            <p class="description">
+                I'm a software developer from Kerala, India, with experience
+                building full-stack web applications using Laravel, Django,
+                PostgreSQL and modern JavaScript.
+            </p>
+            <p class="description">
+                I enjoy turning ideas into practical software—from academic
+                management systems to broadband service platforms and Android
+                accessibility tools. I'm currently exploring the PERN stack
+                while continuously improving my software engineering skills.
+            </p>
+            <div class="socials">
+                <a href="github.com/4NK00">GitHub</a>
+                <a href="linkedin.com/in/anto-soji">LinkedIn</a>
+                <a href="mailto:antosoji.a@gmail.com">Email</a>
+            </div>
+            <div class="buttons">
+                <a href="#projects" class="btn">View Projects</a>
+                <a href="./res/resume/Anto-soji-resume.pdf" class="btn-outline">Resume</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience -->
+    <section id="experience" class="experience fade-in">
+        <div class="section-heading">
+            <h2>Experience</h2>
+            <p>Building software that solves real business problems.</p>
+        </div>
+        <div class="experience-card">
+            <div class="experience-top">
+                <div>
+                    <span class="company-tag">Software Developer</span>
+                    <h3>Gentrius Solutions</h3>
+                </div>
+                <span class="experience-date">May 2025 — Present</span>
+            </div>
+            <p class="job-summary">
+                Full Stack Developer building production-ready web
+                applications using Django, Laravel, PHP and PostgreSQL.
+                Working on client requirements, database optimization,
+                deployments and application maintenance.
+            </p>
+            <div class="skills-used">
+                <span>Django</span>
+                <span>Laravel</span>
+                <span>PostgreSQL</span>
+                <span>JavaScript</span>
+                <span>Tailwind</span>
+                <span>Git</span>
+            </div>
+            <div class="work-grid">
+                <div class="work-item"> Developed the company website from scratch.</div>
+                <div class="work-item"> Optimized production database performance.</div>
+                <div class="work-item"> Built custom client features.</div>
+                <div class="work-item"> Maintained live production systems.</div>
+                <div class="work-item"> Managed deployments and bug fixes.</div>
+                <div class="work-item"> Worked across frontend & backend.</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects" class="projects fade-in">
+        <div class="section-heading">
+            <h2>Featured Projects</h2>
+            <p>Projects that showcase my skills in full-stack development and software engineering.</p>
+        </div>
+
+        <div class="project-card reverse">
+            <div class="project-preview">
+                <a href="github.com/4NK001/carSafari" target="_blank">
+                    <div class="browser">
+                        <div class="browser-header">
+                            <span></span><span></span><span></span>
+                        </div>
+                        <img src="res/img/carSafari.png" alt="CarSafari Preview">
+                        <div class="overlay"><span>↗ View on GitHub</span></div>
+                    </div>
+                </a>
+            </div>
+            <div class="project-info">
+                <span class="project-category">Ride Booking Platform</span>
+                <h3>CarSafari</h3>
+                <p>
+                    Ride-booking platform featuring route planning,
+                    location search, distance calculation and booking
+                    management using OpenStreetMap APIs.
+                </p>
+                <div class="tech-stack">
+                    <span>Django</span>
+                    <span>MySQL</span>
+                    <span>Bootstrap</span>
+                    <span>JavaScript</span>
+                </div>
+                <a href="github.com/4NK001/carSafari" class="github-link">View Repository →</a>
+            </div>
+        </div>
+
+        <div class="project-card reverse">
+            <div class="project-preview">
+                <a href="github.com/4NK001/AssistiveControl" target="_blank" class="device-link">
+                    <div class="device-preview">
+                        <div class="device-screen">
+                            <img src="res/img/assistiveControl.jpeg" alt="AssistiveControl">
+                            <div class="overlay"><span>↗ View Repository</span></div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="project-info">
+                <span class="project-category">Android Application</span>
+                <h3>AssistiveControl</h3>
+                <p>
+                    An Android accessibility application that provides a
+                    floating overlay to simulate hardware button actions,
+                    improving accessibility and device usability.
+                </p>
+                <div class="tech-stack">
+                    <span>Kotlin</span>
+                    <span>Android SDK</span>
+                    <span>Accessibility Service</span>
+                </div>
+                <a href="github.com/4NK001/AssistiveControl" class="github-link" target="_blank">View Repository →</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education -->
+    <section id="education" class="education fade-in">
+        <div class="section-heading">
+            <h2>Education</h2>
+            <p>My academic background and continuous learning journey.</p>
+        </div>
+        <div class="education-card">
+            <div class="education-header">
+                <div>
+                    <h3>Bachelor of Computer Applications (BCA)</h3>
+                    <h4>Nirmala Arts & Science College, Mulanthuruthy</h4>
+                    <p>Mahatma Gandhi University, Kerala</p>
+                </div>
+                <span class="education-year">2022 – 2025</span>
+            </div>
+            <p class="education-description">
+                Completed my Bachelor's degree in Computer Applications with a
+                strong foundation in software development, databases, web
+                technologies, computer networks, operating systems, and object-
+                oriented programming. During my studies, I developed multiple
+                academic and personal projects that strengthened my practical
+                programming skills.
+            </p>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="contact fade-in">
+        <div class="section-heading">
+            <h2>Let's Connect</h2>
+            <p>
+                Whether you have a project, an opportunity, or just want to say hello,
+                I'd love to hear from you.
+            </p>
+        </div>
+        <div class="contact-container">
+            <div class="contact-info">
+                <div class="contact-item">
+                    <h3>Email</h3>
+                    <a href="mailto:antosoji.a@gmail.com">antosoji.a@gmail.com</a>
+                </div>
+                <!-- <div class="contact-item">
+                    <h3>Phone</h3>
+                    <a href="tel:+91xxxxxxx">+91 xxxxxxxx</a>
+                </div> -->
+                <div class="contact-item">
+                    <h3>Location</h3>
+                    <p>Kottayam, Kerala, India</p>
+                </div>
+            </div>
+            <div class="contact-links">
+                <a href="https://github.com/4NK001" target="_blank">GitHub</a>
+                <a href="https://linkedin.com/in/anto-soji" target="_blank">LinkedIn</a>
+                <a href="./res/resume/Anto-soji-resume.pdf" target="_blank">Resume</a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>Designed & Built by Anto Soji</p>
+    </footer>
+
+    <script src="res/js/script.js"></script>
+</body>
+</html>
