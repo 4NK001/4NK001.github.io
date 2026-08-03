@@ -13,7 +13,7 @@ This portfolio was built from scratch using **HTML, CSS, and Vanilla JavaScript*
 -  Light & Dark theme
 -  Keyboard accessible navigation
 -  Command Palette (`Ctrl + K`)
--  Hidden Easter Egg (Type `play` in the command palette 😉)
+-  Hidden Easter Egg (Type `play` in the command palette ;)
 -  Interactive Experience section
 -  Responsive design
 -  Modern, lightweight, and fast
