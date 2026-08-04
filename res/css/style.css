@@ -1125,6 +1125,7 @@ section[id] {
     }
 
     .hero {
+        margin:20px;
         min-height: auto;
         padding: 100px 0 60px;
     }
